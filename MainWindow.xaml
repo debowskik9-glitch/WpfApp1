@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Kalkulator BMI" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+
+            <TextBox TextWrapping="Wrap" AcceptsReturn="True">
+                BMI (Body Mass Index), czyli wskaźnik masy ciała, pokazuje czy proporcja naszej wagi do wzrostu jest prawidłowa (Dla przeciętnego człowieka,
+                nie sprawdza się u sportowców ani u kobiet w ciąży) .
+            </TextBox>
+
+            <Label Content="Waga (kg)"></Label>
+            <TextBox x:Name="weightBox" PreviewTextInput="NumberValidationTextBox" MaxLength="3"></TextBox>
+
+            <Label Content="Wzrost (cm)"></Label>
+            <TextBox x:Name="heightBox" PreviewTextInput="NumberValidationTextBox" MaxLength="3"></TextBox>
+
+            <Button Content="Oblicz BMI" Click="Button_Click" Margin="0, 10, 0, 10"></Button>
+
+            <Label Content="Twoje BMI:"></Label>
+            <TextBox x:Name="resultBMI" IsReadOnly="True"></TextBox>
+
+            <Label Content="Kategoria:"></Label>
+            <TextBox x:Name="category" IsReadOnly="True"></TextBox>
+
+            <Button Content="Wyczysc" Click="Button_Clear"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
